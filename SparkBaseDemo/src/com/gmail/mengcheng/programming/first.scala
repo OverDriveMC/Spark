@@ -1,4 +1,4 @@
-package com.gmail.mengcheng
+package com.gmail.mengcheng.programming
 
 import org.apache.spark.SparkContext
 import org.apache.spark.SparkConf
