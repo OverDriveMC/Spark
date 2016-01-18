@@ -12,7 +12,7 @@ object SparkContextDemo {
     import sqlContext.implicits._
     val df=sqlContext.read.json("D:/testfile/people.json");
     /**
-     * Ã²ËÆÊÇÃ¿¸öÀàĞÅÏ¢¶ÀÕ¼Ò»ĞĞ£¬²»È»Í¦Ææ¹Ö
+     * è²Œä¼¼æ˜¯æ¯ä¸ªç±»ä¿¡æ¯ç‹¬å ä¸€è¡Œï¼Œä¸ç„¶æŒºå¥‡æ€ª
      */
     /*
       +---+----+

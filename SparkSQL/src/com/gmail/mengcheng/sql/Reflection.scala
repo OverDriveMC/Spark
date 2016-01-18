@@ -29,7 +29,7 @@ object Reflection {
     // row.getValuesMap[T] retrieves multiple columns at once into a Map[String, T]
 //    Map(name -> bm, age -> 15)
 //    Map(name -> mk, age -> 16)
-    //Any 类型是Scala 类型结构的根类型,类似于Object
+    //Any 绫诲瀷鏄疭cala 绫诲瀷缁撴瀯鐨勬牴绫诲瀷,绫讳技浜嶰bject
     teenagers.map(_.getValuesMap[Any](List("name","age"))).collect().foreach(println)
         
   }

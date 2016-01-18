@@ -15,7 +15,7 @@ object SchemaMerge {
     // Create a simple DataFrame, stored into a partition directory
     val df1=sc.makeRDD(1 to 5).map { i =>(i, i*2) }.toDF("single","double")
     /**
-     *  Á½¸öºó×ºÃû±ØĞëÒªÒ»Ñù£¬Õâ¸öÃû³Æ»á³ÉÎªºÏ²¢Ö®ºóµÄ±íµÄÒ»ÁĞ£¬ÖµÎª¼¸£¬¸ÃĞĞ¾ÍÎª¼¸
+     *  ä¸¤ä¸ªåç¼€åå¿…é¡»è¦ä¸€æ ·ï¼Œè¿™ä¸ªåç§°ä¼šæˆä¸ºåˆå¹¶ä¹‹åçš„è¡¨çš„ä¸€åˆ—ï¼Œå€¼ä¸ºå‡ ï¼Œè¯¥è¡Œå°±ä¸ºå‡ 
      */
     df1.write.parquet("D:/testfile/sql/data/test_table/data=5")
     // Create another DataFrame in a new partition directory,

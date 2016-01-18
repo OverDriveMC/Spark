@@ -16,7 +16,7 @@ object LoadingData {
     
     import sqlContext.implicits._
     val people=sqlContext.read.json("D:/testfile/sql/people.json").as[Person].rdd
-    //ÒşÊ½×ª»»Ã»×ª»»³É¹¦
+    //éšå¼è½¬æ¢æ²¡è½¬æ¢æˆåŠŸ
     // The RDD is implicitly converted to a DataFrame by implicits, 
     //allowing it to be stored using Parquet
     //people.toDF().write.parquet("D:/testfile/sql/person.parquet")
