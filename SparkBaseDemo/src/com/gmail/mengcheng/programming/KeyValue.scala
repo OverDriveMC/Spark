@@ -21,18 +21,18 @@ object KeyValue {
     val sorts2=counts.sortByKey()
     sorts2.collect.foreach(println)
     
-    ///¿ÉÒÔÍ¨¹ý¶¨ÒåÕâ¸öÐÞ¸ÄÄ¬ÈÏÅÅÐò¹æÔò
-    ///¸ÃÔõÃ´½«Õâ¸ö¶¨ÒåÎªÁÙÊ±µÄ£¿£¿£¿£¿
+    ///å¯ä»¥é€šè¿‡å®šä¹‰è¿™ä¸ªä¿®æ”¹é»˜è®¤æŽ’åºè§„åˆ™
+    ///è¯¥æ€Žä¹ˆå°†è¿™ä¸ªå®šä¹‰ä¸ºä¸´æ—¶çš„ï¼Ÿï¼Ÿï¼Ÿï¼Ÿ
     implicit val sortString=new Ordering[String]{
       override def compare(a : String , b:String)={
         a.length()- b.length()  
       }
     }
-    ///ÕâÀïµÄkeyÎªString£¬½«°´ÕÕÉÏÃæ¶¨ÒåµÄÅÅÐò¹æÔòÀ´±È½Ï
+    ///è¿™é‡Œçš„keyä¸ºStringï¼Œå°†æŒ‰ç…§ä¸Šé¢å®šä¹‰çš„æŽ’åºè§„åˆ™æ¥æ¯”è¾ƒ
     val sorts3=counts.sortByKey()
     sorts3.collect.foreach(println)
    
-    //¶¨Òå±È½Ï¹æÔò
+    //å®šä¹‰æ¯”è¾ƒè§„åˆ™
     val sorts4=counts.sortBy(a=>a._1.length()/a._2,true,1)
     sorts4.collect.foreach(println)
   }

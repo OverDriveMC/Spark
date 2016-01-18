@@ -23,7 +23,7 @@ object first{
     print(value)
   }
   def testFileSystem(){
-    //本地的话似乎直接使用目录不行
+    //鏈湴鐨勮瘽浼间箮鐩存帴浣跨敤鐩綍涓嶈
     val distFile=sc.textFile("D:/testfile/*.txt")
     distFile.foreach(println)
     val totalLength=distFile.map { a =>a.length() }.reduce( (a,b) =>a+b)

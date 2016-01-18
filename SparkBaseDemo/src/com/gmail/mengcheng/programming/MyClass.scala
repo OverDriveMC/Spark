@@ -4,7 +4,7 @@ import org.apache.spark.SparkConf
 import org.apache.spark.rdd._
 
 class MyClass {
-  //ÓĞ·µ»ØÖµµÄ»°ĞèÒª¼Ó =Ã²ËÆ¡£¡£¡£
+  //æœ‰è¿”å›å€¼çš„è¯éœ€è¦åŠ  =è²Œä¼¼ã€‚ã€‚ã€‚
   def func1(s :String) :String={
      s+":"+s.length()
   } 

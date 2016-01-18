@@ -15,10 +15,10 @@ object PrintWriterTest extends Serializable{
      val counts=file.flatMap { x => x.split("\t") }.map(x=>(x,1)).reduceByKey(_+_)
      counts.foreach(println)
      /**
-      * ����д��ͨ�����˵ģ���Ϊ�������ִ��룬����зֲ�ʽ���㣬�����ڲ����붼Ҫ�ܹ����л�
-      * ��PrintWriter�������ܹ����л����������д�ڱհ��ڲ��ǿ��Եģ���Ϊд�ڱհ��ڲ����ھֲ�������
-      * ��ÿ���������е�ʱ�򶼿��Դ���������Ӱ��������㣬��д������Ļ���ȫ�ֱ���
-      * ����Ҫ����RDD�ļ���ʱ��ʹ��saveAsTextFile()���ڲ�RDD��ʲô��ʽ���ͱ���Ϊʲô��ʽ
+      * 这样写是通过不了的，因为对于这种代码，会进行分布式计算，所以内部代码都要能够序列化
+      * 而PrintWriter本身不能够序列化，但是如果写在闭包内部是可以的，因为写在闭包内部属于局部变量，
+      * 在每个分区运行的时候都可以创建，并不影响整体计算，而写在外面的话是全局变量
+      * 所以要保存RDD文件的时候使用saveAsTextFile()，内部RDD是什么格式，就保存为什么格式
       */
      /**
      counts.foreach{

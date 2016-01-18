@@ -17,7 +17,7 @@ object Transformation {
     val sizeOne=counts.filter(x=>x._2==1)
     sizeOne.collect.foreach(println)
     //mapPartitions
-    //参数返回值都是迭代器
+    //鍙傛暟杩斿洖鍊奸兘鏄凯浠ｅ櫒
     val mapPa=counts.mapPartitions(x=>x.map(y=>(y._1+"hehe",y._2)))
     mapPa.foreach(println)
     //union

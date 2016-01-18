@@ -19,7 +19,7 @@ object DataDeal {
       filterData()
       
     }
-    //选取数据
+    //閫夊彇鏁版嵁
     def selectData(){
       for(i<-1 to 4){
         val file=sc.textFile("D:/testfile/databackup/data"+i+".txt")
@@ -32,7 +32,7 @@ object DataDeal {
         writer.close()
       }
     }
-    //过滤数据
+    //杩囨护鏁版嵁
     def filterData(){
       val file=sc.textFile("D:/testfile/datafinal/power/*.txt")
       val pairs=file.map { x =>  
