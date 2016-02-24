@@ -11,7 +11,7 @@ object HiveTable {
     import org.apache.hadoop.fs._
     val path = new Path("file:/tmp/hive")
     val lfs = FileSystem.get(path.toUri(), sc.hadoopConfiguration)
-    lfs.setPermission(path, new org.apache.hadoop.fs.permission.FsPermission("0777".toShort))
+    lfs.setPermission(path, new org.apache.hadoop.fs.permission.FsPermission("777"))
     println(lfs.getFileStatus(path).getPermission())
     
 
